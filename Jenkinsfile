@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build Frontend') {
             steps {
-                sh 'docker build -t frontend:latest ./frontend'
+                sh 'docker build -t project-frontend:latest ./frontend'
             }
         }
         stage('Deploy with Docker Compose') {
