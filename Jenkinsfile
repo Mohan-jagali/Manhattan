@@ -17,11 +17,6 @@ pipeline {
                 sh 'docker build -t project-frontend:latest ./frontend'
             }
         }
-        stage('Deploy with Docker Compose') {
-            steps {
-              //  sh 'docker-compose up -d --build'
-            }
-        }
         stage('Deploy with Terraform') {
             steps {
                 dir('terraform') {
