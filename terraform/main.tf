@@ -52,7 +52,7 @@ resource "docker_container" "reverse_proxy" {
     name = docker_network.app_network.name
   }
   volumes {
-    host_path      = "./nginx.conf"
+    host_path      = "../nginx.conf"
     container_path = "/etc/nginx/nginx.conf"
   }
 }
